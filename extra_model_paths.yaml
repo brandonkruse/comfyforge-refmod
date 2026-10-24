@@ -1,0 +1,29 @@
+# Serverless mounts vbwewsfizl at /runpod-volume. Pods mount it at /workspace,
+# and setup_pod_full.sh laid the models out under ComfyUI/models there. So the
+# same files are at /runpod-volume/ComfyUI/models here. The flat /models keys
+# cover a worker that populated the volume itself (huchukato's layout).
+volume_pod_layout:
+  base_path: /runpod-volume/ComfyUI/models
+  checkpoints: checkpoints
+  diffusion_models: diffusion_models
+  unet: unet
+  loras: loras
+  vae: vae
+  text_encoders: text_encoders
+  clip: clip
+  clip_vision: clip_vision
+  upscale_models: upscale_models
+  h3_refmods_lab: h3_refmods_lab
+
+volume_flat_layout:
+  base_path: /runpod-volume/models
+  checkpoints: checkpoints
+  diffusion_models: diffusion_models
+  unet: unet
+  loras: loras
+  vae: vae
+  text_encoders: text_encoders
+  clip: clip
+  clip_vision: clip_vision
+  upscale_models: upscale_models
+  h3_refmods_lab: h3_refmods_lab
